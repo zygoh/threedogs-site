@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#f0ebe3" stroke-width="0.35" opacity="0.04"/>
+    </pattern>
+    <radialGradient id="mist" cx="72%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#6b8f7a" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#0a0a09" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0a0a09" width="1200" height="1600"/>
+  <rect width="1200" height="1600" fill="url(#grid)"/>
+  <rect width="1200" height="1600" fill="url(#mist)"/>
+
+  <rect x="72" y="72" width="1056" height="1456" fill="none" stroke="#f0ebe3" stroke-width="0.5" opacity="0.08"/>
+  <line x1="72" y1="200" x2="1128" y2="200" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  <line x1="360" y1="72" x2="360" y2="1528" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+
+  <circle cx="860" cy="420" r="180" fill="none" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  <circle cx="860" cy="420" r="120" fill="none" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  <circle cx="860" cy="420" r="60" fill="none" stroke="#f0ebe3" stroke-width="0.8" opacity="0.22"/>
+  <circle cx="860" cy="420" r="8" fill="#6b8f7a" opacity="0.35"/>
+
+  <g transform="translate(780 300)">
+    <ellipse cx="80" cy="150" rx="36" ry="12" fill="#c4a4a0" opacity="0.08"/>
+    <path d="M80 60 C62 82 54 110 58 138 C62 162 70 176 80 180 C90 176 98 162 102 138 C106 110 98 82 80 60Z" fill="none" stroke="#c4a4a0" stroke-width="0.9" opacity="0.7"/>
+    <path d="M80 72 C72 92 68 112 70 132" fill="none" stroke="#c4a4a0" stroke-width="0.5" opacity="0.35"/>
+    <path d="M80 72 C88 92 92 112 90 132" fill="none" stroke="#c4a4a0" stroke-width="0.5" opacity="0.35"/>
+    <path d="M48 128 C60 118 70 114 80 116" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+    <path d="M112 128 C100 118 90 114 80 116" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  </g>
+
+  <g opacity="0.25">
+    <line x1="120" y1="980" x2="320" y2="980" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+    <line x1="120" y1="1000" x2="280" y2="1000" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+    <line x1="120" y1="1020" x2="240" y2="1020" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+    <line x1="120" y1="1040" x2="200" y2="1040" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  </g>
+
+  <text x="96" y="108" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">SPECIMEN · 043.5890°N · 079.6441°W</text>
+  <text x="96" y="132" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">INDEX 00 / OBSERVATION LOG</text>
+
+  <text x="96" y="340" font-family="Georgia, serif" font-size="92" font-weight="300" fill="#f0ebe3" letter-spacing="4">threedogs</text>
+  <text x="100" y="390" font-family="Georgia, serif" font-size="18" font-weight="300" fill="#a8a49c" letter-spacing="6">INK LATTICE</text>
+  <text x="100" y="430" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">@THREE_DOG_Z</text>
+
+  <text x="96" y="1280" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#8a8680">be like a lotus — rise unsoiled</text>
+  <text x="96" y="1480" font-family="Consolas, monospace" font-size="10" fill="#5c6b62" letter-spacing="1.2">INK LATTICE CONTEMPLATION · 2026</text>
+
+  <path d="M72 72 H100 M72 72 V100" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  <path d="M1128 72 H1100 M1128 72 V100" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  <path d="M72 1528 H100 M72 1528 V1500" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  <path d="M1128 1528 H1100 M1128 1528 V1500" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+</svg>

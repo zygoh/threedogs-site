@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+docker-compose.yml
+design/node_modules
+design/package.json
+design/package-lock.json
+design/render.mjs
