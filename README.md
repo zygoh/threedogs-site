@@ -1,6 +1,6 @@
 # threedogs-site
 
-> **简介**：threedogs（[@Three_Dog_z](https://x.com/Three_Dog_z)）中英双语个人站，墨格静观编辑级静态页面；支持 Docker + Nginx 一键部署。
+> **简介**：threedogs（[@Three_Dog_z](https://x.com/Three_Dog_z)）中英双语个人站，石墨观测式黑白静态页面；支持 Docker + Nginx 一键部署。
 
 纯静态 HTML/CSS/JS，无构建步骤。语言切换见右上角「中 / EN」（写入 `localStorage`）。
 
@@ -41,6 +41,6 @@ threedogs-site/
 
 仓库 Settings → General → Description 可填：
 
-`threedogs 中英双语个人站（@Three_Dog_z），墨格静观静态站点，Docker + Nginx 一键部署。`
+`threedogs 中英双语个人站（@Three_Dog_z），石墨观测式黑白静态站点，Docker + Nginx 一键部署。`
 
 或使用 `scripts/set-github-descriptions.ps1` 批量设置四个仓库简介（需 `GITHUB_TOKEN`）。
