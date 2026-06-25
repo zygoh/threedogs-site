@@ -1,55 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
   <defs>
-    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#f0ebe3" stroke-width="0.35" opacity="0.04"/>
+    <filter id="paper-grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="5" seed="37"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.13"/>
+      </feComponentTransfer>
+    </filter>
+
+    <pattern id="micro-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#f4f0e8" stroke-width="0.32" opacity="0.044"/>
+      <circle cx="0" cy="0" r="0.8" fill="#f4f0e8" opacity="0.065"/>
     </pattern>
-    <radialGradient id="mist" cx="72%" cy="18%" r="55%">
-      <stop offset="0%" stop-color="#6b8f7a" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#0a0a09" stop-opacity="0"/>
-    </radialGradient>
+
+    <pattern id="field-ticks" width="24" height="120" patternUnits="userSpaceOnUse">
+      <path d="M0 0V18 M0 48V54 M0 86V120" stroke="#f4f0e8" stroke-width="0.45" opacity="0.11"/>
+    </pattern>
+
+    <linearGradient id="edge-falloff" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f0e8" stop-opacity="0.055"/>
+      <stop offset="0.46" stop-color="#f4f0e8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f4f0e8" stop-opacity="0.035"/>
+    </linearGradient>
   </defs>
 
-  <rect fill="#0a0a09" width="1200" height="1600"/>
-  <rect width="1200" height="1600" fill="url(#grid)"/>
-  <rect width="1200" height="1600" fill="url(#mist)"/>
+  <rect width="1200" height="1600" fill="#070707"/>
+  <rect width="1200" height="1600" fill="url(#micro-grid)"/>
+  <rect width="1200" height="1600" fill="url(#edge-falloff)"/>
+  <rect width="1200" height="1600" filter="url(#paper-grain)" opacity="0.28"/>
 
-  <rect x="72" y="72" width="1056" height="1456" fill="none" stroke="#f0ebe3" stroke-width="0.5" opacity="0.08"/>
-  <line x1="72" y1="200" x2="1128" y2="200" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
-  <line x1="360" y1="72" x2="360" y2="1528" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  <rect x="72" y="72" width="1056" height="1456" fill="none" stroke="#f4f0e8" stroke-width="0.55" opacity="0.21"/>
+  <rect x="96" y="96" width="1008" height="1408" fill="none" stroke="#f4f0e8" stroke-width="0.35" opacity="0.055"/>
+  <path d="M72 248H1128 M360 72V1528 M888 72V1528" fill="none" stroke="#f4f0e8" stroke-width="0.45" opacity="0.12"/>
+  <path d="M96 1232H1104" fill="none" stroke="#f4f0e8" stroke-width="0.45" opacity="0.1"/>
 
-  <circle cx="860" cy="420" r="180" fill="none" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
-  <circle cx="860" cy="420" r="120" fill="none" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
-  <circle cx="860" cy="420" r="60" fill="none" stroke="#f0ebe3" stroke-width="0.8" opacity="0.22"/>
-  <circle cx="860" cy="420" r="8" fill="#6b8f7a" opacity="0.35"/>
-
-  <g transform="translate(780 300)">
-    <ellipse cx="80" cy="150" rx="36" ry="12" fill="#c4a4a0" opacity="0.08"/>
-    <path d="M80 60 C62 82 54 110 58 138 C62 162 70 176 80 180 C90 176 98 162 102 138 C106 110 98 82 80 60Z" fill="none" stroke="#c4a4a0" stroke-width="0.9" opacity="0.7"/>
-    <path d="M80 72 C72 92 68 112 70 132" fill="none" stroke="#c4a4a0" stroke-width="0.5" opacity="0.35"/>
-    <path d="M80 72 C88 92 92 112 90 132" fill="none" stroke="#c4a4a0" stroke-width="0.5" opacity="0.35"/>
-    <path d="M48 128 C60 118 70 114 80 116" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
-    <path d="M112 128 C100 118 90 114 80 116" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  <g transform="translate(98 108)" font-family="Consolas, 'IBM Plex Mono', monospace" fill="#bbb5aa" letter-spacing="2.1">
+    <text x="0" y="0" font-size="10.5">SPECIMEN 043.5890 N / 079.6441 W</text>
+    <text x="0" y="25" font-size="10.5" opacity="0.72">OBSERVATORY / PRIVATE INDEX / NO. 003</text>
+    <text x="790" y="0" font-size="10.5" text-anchor="end" opacity="0.68">CARBON FIELD</text>
+    <text x="1006" y="25" font-size="10.5" text-anchor="end" opacity="0.68">2026</text>
   </g>
 
-  <g opacity="0.25">
-    <line x1="120" y1="980" x2="320" y2="980" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
-    <line x1="120" y1="1000" x2="280" y2="1000" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
-    <line x1="120" y1="1020" x2="240" y2="1020" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
-    <line x1="120" y1="1040" x2="200" y2="1040" stroke="#f0ebe3" stroke-width="0.6" opacity="0.12"/>
+  <g transform="translate(96 319)">
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="94" font-weight="300" fill="#f8f3ea" letter-spacing="4">threedogs</text>
+    <text x="5" y="52" font-family="Consolas, 'IBM Plex Mono', monospace" font-size="10.5" fill="#aaa59c" letter-spacing="3.4">@THREE_DOG_Z / DAO HEART STUDY</text>
+    <path d="M5 82H212 M238 82H292 M318 82H334" stroke="#f4f0e8" stroke-width="0.58" opacity="0.42"/>
   </g>
 
-  <text x="96" y="108" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">SPECIMEN · 043.5890°N · 079.6441°W</text>
-  <text x="96" y="132" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">INDEX 00 / OBSERVATION LOG</text>
+  <g transform="translate(616 292)">
+    <circle cx="220" cy="220" r="204" fill="none" stroke="#f4f0e8" stroke-width="0.48" opacity="0.16"/>
+    <circle cx="220" cy="220" r="154" fill="none" stroke="#f4f0e8" stroke-width="0.48" opacity="0.2"/>
+    <circle cx="220" cy="220" r="104" fill="none" stroke="#f4f0e8" stroke-width="0.55" opacity="0.26"/>
+    <circle cx="220" cy="220" r="54" fill="none" stroke="#f4f0e8" stroke-width="0.62" opacity="0.32"/>
+    <path d="M220 16V66 M220 374V424 M16 220H66 M374 220H424" stroke="#f4f0e8" stroke-width="0.5" opacity="0.2"/>
+    <path d="M88 64C126 96 166 113 220 112C274 113 314 96 352 64" fill="none" stroke="#f4f0e8" stroke-width="0.46" opacity="0.12"/>
+    <path d="M88 376C126 344 166 327 220 328C274 327 314 344 352 376" fill="none" stroke="#f4f0e8" stroke-width="0.46" opacity="0.12"/>
+    <circle cx="202" cy="220" r="3.6" fill="#f4f0e8" opacity="0.58"/>
+    <circle cx="220" cy="220" r="3.6" fill="#f4f0e8" opacity="0.78"/>
+    <circle cx="238" cy="220" r="3.6" fill="#f4f0e8" opacity="0.58"/>
+  </g>
 
-  <text x="96" y="340" font-family="Georgia, serif" font-size="92" font-weight="300" fill="#f0ebe3" letter-spacing="4">threedogs</text>
-  <text x="100" y="390" font-family="Georgia, serif" font-size="18" font-weight="300" fill="#a8a49c" letter-spacing="6">INK LATTICE</text>
-  <text x="100" y="430" font-family="Consolas, monospace" font-size="11" fill="#8a8680" letter-spacing="2">@THREE_DOG_Z</text>
+  <g transform="translate(732 392)" fill="none" stroke="#f4f0e8">
+    <ellipse cx="104" cy="232" rx="53" ry="13" stroke-width="0.55" opacity="0.1"/>
+    <path d="M104 84C79 116 68 154 75 190C80 218 92 239 104 246C116 239 128 218 133 190C140 154 129 116 104 84Z" stroke-width="0.95" opacity="0.62"/>
+    <path d="M104 102C93 132 88 160 91 194" stroke-width="0.52" opacity="0.3"/>
+    <path d="M104 102C115 132 120 160 117 194" stroke-width="0.52" opacity="0.3"/>
+    <path d="M58 186C73 172 90 166 104 171" stroke-width="0.62" opacity="0.33"/>
+    <path d="M150 186C135 172 118 166 104 171" stroke-width="0.62" opacity="0.33"/>
+  </g>
 
-  <text x="96" y="1280" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#8a8680">be like a lotus — rise unsoiled</text>
-  <text x="96" y="1480" font-family="Consolas, monospace" font-size="10" fill="#5c6b62" letter-spacing="1.2">INK LATTICE CONTEMPLATION · 2026</text>
+  <g transform="translate(120 720)" opacity="0.72">
+    <rect x="0" y="0" width="240" height="360" fill="url(#field-ticks)" opacity="0.58"/>
+    <path d="M0 0H240 M0 72H168 M0 144H212 M0 216H132 M0 288H196 M0 360H240" stroke="#f4f0e8" stroke-width="0.55" opacity="0.18"/>
+    <path d="M0 0V360 M80 0V360 M160 0V360 M240 0V360" stroke="#f4f0e8" stroke-width="0.35" opacity="0.1"/>
+    <text x="0" y="405" font-family="Consolas, 'IBM Plex Mono', monospace" font-size="10" fill="#a39d93" letter-spacing="2">THREEFOLD TRACE / 6-LINE FIELD</text>
+  </g>
 
-  <path d="M72 72 H100 M72 72 V100" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
-  <path d="M1128 72 H1100 M1128 72 V100" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
-  <path d="M72 1528 H100 M72 1528 V1500" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
-  <path d="M1128 1528 H1100 M1128 1528 V1500" fill="none" stroke="#6b8f7a" stroke-width="0.7" opacity="0.55"/>
+  <g transform="translate(450 760)" fill="none" stroke="#f4f0e8" opacity="0.68">
+    <path d="M0 124C120 10 278 8 420 112" stroke-width="0.55" opacity="0.24"/>
+    <path d="M0 172C120 58 278 56 420 160" stroke-width="0.55" opacity="0.2"/>
+    <path d="M0 220C120 106 278 104 420 208" stroke-width="0.55" opacity="0.16"/>
+    <path d="M0 268C120 154 278 152 420 256" stroke-width="0.55" opacity="0.12"/>
+    <circle cx="0" cy="124" r="2" fill="#f4f0e8" stroke="none" opacity="0.42"/>
+    <circle cx="420" cy="112" r="2" fill="#f4f0e8" stroke="none" opacity="0.42"/>
+  </g>
+
+  <g transform="translate(96 1286)" font-family="Georgia, 'Times New Roman', serif">
+    <text x="0" y="0" font-size="22" font-style="italic" fill="#c8c1b6" letter-spacing="0.2">be like a lotus</text>
+    <text x="0" y="38" font-size="14" fill="#999288" letter-spacing="1.2">rise unsoiled / keep the line quiet</text>
+  </g>
+
+  <g transform="translate(96 1462)" font-family="Consolas, 'IBM Plex Mono', monospace" fill="#9f988e" letter-spacing="1.8">
+    <text x="0" y="0" font-size="9.8">GRAPHITE OBSERVATORY</text>
+    <text x="0" y="24" font-size="9.8" opacity="0.68">FIELD PLATE FOR AN UNMEASURABLE HEART</text>
+    <text x="1008" y="24" font-size="9.8" text-anchor="end" opacity="0.68">F4F0E8 / 070707</text>
+  </g>
+
+  <g fill="none" stroke="#f4f0e8" stroke-width="0.75" opacity="0.44">
+    <path d="M72 72H103 M72 72V103"/>
+    <path d="M1128 72H1097 M1128 72V103"/>
+    <path d="M72 1528H103 M72 1528V1497"/>
+    <path d="M1128 1528H1097 M1128 1528V1497"/>
+  </g>
 </svg>

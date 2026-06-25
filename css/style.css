@@ -1,18 +1,21 @@
 /* threedogs — Ink Lattice Contemplation */
 
 :root {
-  --bg: #0a0a09;
-  --bg-elevated: #10100f;
-  --surface: #141413;
-  --text: #f0ebe3;
-  --text-muted: #8a8680;
-  --text-faint: #5c5a56;
-  --accent: #6b8f7a;
-  --accent-soft: #8aa894;
-  --rose: #c4a4a0;
-  --border: rgba(240, 235, 227, 0.07);
-  --border-strong: rgba(240, 235, 227, 0.14);
-  --mist: rgba(107, 143, 122, 0.06);
+  color-scheme: dark light;
+
+  --bg: #050505;
+  --bg-elevated: #101010;
+  --surface: #151515;
+  --text: #f4f4f4;
+  --text-muted: #a8a8a8;
+  --text-faint: #6a6a6a;
+  --accent: #f4f4f4;
+  --accent-soft: #d6d6d6;
+  --rose: #c4c4c4;
+  --border: rgba(244, 244, 244, 0.08);
+  --border-strong: rgba(244, 244, 244, 0.16);
+  --mist: rgba(244, 244, 244, 0.05);
+  --header-bg: linear-gradient(to bottom, rgba(5, 5, 5, 0.94) 55%, transparent);
 
   --font-display: "Noto Serif SC", Georgia, serif;
   --font-display-en: "Cormorant Garamond", Georgia, serif;
@@ -24,6 +27,26 @@
   --header-h: 5rem;
   --frame: clamp(1.5rem, 5vw, 4.5rem);
   --content: min(1080px, 100% - var(--frame) * 2);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --bg: #fafafa;
+    --bg-elevated: #f0f0f0;
+    --surface: #ffffff;
+    --text: #111111;
+    --text-muted: #555555;
+    --text-faint: #8a8a8a;
+    --accent: #111111;
+    --accent-soft: #333333;
+    --rose: #4a4a4a;
+    --border: rgba(17, 17, 17, 0.08);
+    --border-strong: rgba(17, 17, 17, 0.16);
+    --mist: rgba(17, 17, 17, 0.045);
+    --header-bg: linear-gradient(to bottom, rgba(250, 250, 250, 0.94) 55%, transparent);
+  }
 }
 
 *, *::before, *::after {
@@ -141,7 +164,7 @@ img, svg {
   justify-content: space-between;
   height: var(--header-h);
   padding: 0 var(--frame);
-  background: linear-gradient(to bottom, rgba(10, 10, 9, 0.94) 55%, transparent);
+  background: var(--header-bg);
 }
 
 .logo {
