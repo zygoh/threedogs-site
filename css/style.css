@@ -76,6 +76,19 @@ body[data-lang="en"] {
   --font-serif: var(--font-serif-en);
 }
 
+/* bilingual GEO blocks: zh default in initial HTML, en on toggle */
+[data-lang-block="en"] {
+  display: none;
+}
+
+body[data-lang="en"] [data-lang-block="en"] {
+  display: block;
+}
+
+body[data-lang="en"] [data-lang-block="zh"] {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
